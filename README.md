@@ -1,4 +1,4 @@
-# Progressive Difficulty
+# Adaptive Survival
 
 A Fabric mod for Minecraft Java Edition 26.3 that makes survival progressively
 more dangerous as the player reaches meaningful world milestones.
@@ -42,7 +42,7 @@ The distributable JAR is written to `build/libs`.
 - Temporary pursuit, melee damage, species-specific speed, and knockback
 - Spawn-time hostile health and damage scaling by tier, depth, and dimension
 - Tier-, depth-, and dimension-aware hostile equipment and enchantments
-- Existing vanilla equipment is preserved; Progressive Difficulty only fills empty slots
+- Existing vanilla equipment is preserved; Adaptive Survival only fills empty slots
 - Equipment is applied once per mob and uses vanilla-style drop chances
 - Tier 8 has a greatly increased chance to roll netherite equipment, which never drops from the mob
 - Some higher-tier skeletons and pillagers switch to a melee weapon at close range

@@ -83,7 +83,7 @@ public final class DifficultyCommand {
 		double healthMultiplier = AttributeModifierManager.appliedHealthMultiplier(target);
 		double damageMultiplier = AttributeModifierManager.appliedDamageMultiplier(target);
 
-		source.sendSystemMessage(Component.literal("Progressive Difficulty — Mob Inspection")
+		source.sendSystemMessage(Component.literal("Adaptive Survival — Mob Inspection")
 				.withStyle(ChatFormatting.GOLD, ChatFormatting.BOLD));
 		source.sendSystemMessage(Component.literal("Mob: ").append(target.getDisplayName()));
 		source.sendSystemMessage(Component.literal(String.format(
@@ -143,7 +143,7 @@ public final class DifficultyCommand {
 		WorldProgressionState state = WorldProgressionState.get(source.getServer());
 		long worldDay = ProgressionManager.worldDay(source.getServer());
 
-		source.sendSystemMessage(Component.literal("Progressive Difficulty")
+		source.sendSystemMessage(Component.literal("Adaptive Survival")
 				.withStyle(ChatFormatting.GOLD, ChatFormatting.BOLD));
 		source.sendSystemMessage(Component.literal("Current Tier: " + state.currentTier()));
 		source.sendSystemMessage(Component.literal("Mob Kills: " + state.playerMobKills()));
@@ -165,13 +165,13 @@ public final class DifficultyCommand {
 
 	private static int setTier(CommandSourceStack source, int tier) {
 		WorldProgressionState.get(source.getServer()).setTierForTesting(tier);
-		source.sendSuccess(() -> Component.literal("Progressive Difficulty set to Tier " + tier + "."), true);
+		source.sendSuccess(() -> Component.literal("Adaptive Survival set to Tier " + tier + "."), true);
 		return tier;
 	}
 
 	private static int reset(CommandSourceStack source) {
 		WorldProgressionState.get(source.getServer()).reset();
-		source.sendSuccess(() -> Component.literal("Progressive Difficulty reset to Tier 0."), true);
+		source.sendSuccess(() -> Component.literal("Adaptive Survival reset to Tier 0."), true);
 		return 1;
 	}
 

@@ -28,7 +28,7 @@ public class ProgressiveDifficulty implements ModInitializer {
 		HostileBehaviourManager.register();
 		PassiveRetaliationManager.register();
 		DifficultyCommand.register();
-		LOGGER.info("Progressive Difficulty initialized.");
+		LOGGER.info("Adaptive Survival initialized.");
 	}
 
 	public static Identifier id(String path) {
