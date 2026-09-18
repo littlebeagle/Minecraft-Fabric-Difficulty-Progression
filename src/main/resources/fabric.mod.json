@@ -1,0 +1,30 @@
+{
+	"schemaVersion": 1,
+	"id": "progressivedifficulty",
+	"version": "${version}",
+	"name": "Progressive Difficulty",
+	"description": "Makes survival progressively more dangerous as world milestones are reached.",
+	"license": "CC0-1.0",
+	"icon": "assets/progressivedifficulty/EvilCow.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"dev.alist.progressivedifficulty.ProgressiveDifficulty"
+		],
+		"client": [
+			"dev.alist.progressivedifficulty.client.ProgressiveDifficultyClient"
+		]
+	},
+	"mixins": [
+		{
+			"config": "progressivedifficulty.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
